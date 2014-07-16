@@ -7,8 +7,7 @@ public class Main {
 	public static void main(String args[]) {
 		Scanner scanner = new Scanner(System.in);
 
-		System.out
-				.println("Введите уровень сложности. Чем больше число, тем сложнее.");
+		System.out.println("Введите уровень сложности. Чем больше число, тем сложнее.");
 		System.out.println("Выберите количество итераций.");
 		System.out.println("Выберите вид операции. \n" + "1 - +\n" + "2 - -\n"
 				+ "3 - *\n" + "4 - /\n");
