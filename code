@@ -1,3 +1,110 @@
+Randoms // With default case.
+=======
+
+import java.util.*;
+
+public class Main {
+
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out
+				.println("Введите уровень сложности. Чем больше число, тем сложнее.");
+		System.out.println("Выберите количество итераций.");
+		System.out.println("Выберите вид операции. \n" + "1 - +\n" + "2 - -\n"
+				+ "3 - *\n" + "4 - /\n");
+
+		double d = scanner.nextDouble();
+		int iterationCount = scanner.nextInt();
+		int operation = scanner.nextInt();
+
+		int i = (int) d; // Преобразование типа.
+		int m = (int) Math.pow(10, i);
+		int k = 0;
+
+		switch (operation) {
+		case 1:
+			while (k < iterationCount) {
+				int g1 = (int) Math.round(Math.random() * m);
+				int g2 = (int) Math.round(Math.random() * m);
+
+				System.out.println(g1 + " + " + g2 + " = \n");
+				int sum = (int) g1 + g2;
+				int res = scanner.nextInt();
+				if (sum == res) {
+					System.out.println(g1 + g2 + " " + "Молодец.");
+				} else
+					System.out.print(g1 + g2 + "\n");
+				k++;
+			}
+			
+		case 2:
+			while (k < iterationCount) {
+				int g1 = (int) Math.round(Math.random() * m);
+				int g2 = (int) Math.round(Math.random() * m);
+
+				System.out.println(g1 + " - " + g2 + " = \n");
+				int sum = (int) g1 - g2;
+				int res = scanner.nextInt();
+				if (sum == res) {
+					System.out.println(g1 - g2 + " " + "Молодец.");
+				} else
+					System.out.print(g1 - g2 + "\n");
+				k++;
+			}
+		case 3:
+			while (k < iterationCount) {
+				int g1 = (int) Math.round(Math.random() * m);
+				int g2 = (int) Math.round(Math.random() * m);
+
+				System.out.println(g1 + " * " + g2 + " = \n");
+				int sum = (int) g1 * g2;
+				int res = scanner.nextInt();
+				if (sum == res) {
+					System.out.println(g1 * g2 + " " + "Молодец.");
+				} else
+					System.out.print(g1 * g2 + "\n");
+				k++;
+			}
+		case 4:
+			while (k < iterationCount) {
+				int g1 = (int) Math.round(Math.random() * m);
+				int g2 = (int) Math.round(Math.random() * m);
+				while (g1 % g2 != 0 && g1 != 0) {
+					g1 = (int) Math.round(Math.random() * m);
+				}
+				System.out.println(g1 + " / " + g2 + " = \n");
+				int sum = (int) g1 / g2;
+				int res = scanner.nextInt();
+				if (sum == res) {
+					System.out.println(g1 / g2 + " " + "Молодец.");
+				} else
+					System.out.print(g1 / g2 + "\n");
+				k++;
+			}
+			
+		default:
+			while (k < iterationCount) {
+				int g1 = (int) Math.round(Math.random() * m);
+				int g2 = (int) Math.round(Math.random() * m);
+
+				System.out.println(g1 + " + " + g2 + " = \n");
+				int sum = (int) g1 + g2;
+				int res = scanner.nextInt();
+				if (sum == res) {
+					System.out.println(g1 + g2 + " " + "Молодец.");
+				} else
+					System.out.print(g1 + g2 + "\n");
+				k++;
+			}
+		}
+	}
+
+}
+
+
+
+
 Randoms
 =======
 import java.util.*;
